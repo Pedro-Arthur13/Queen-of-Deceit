@@ -1,0 +1,1 @@
+global.opacidade_transicao = 0
