@@ -41,6 +41,9 @@ if place_meeting(x,y+vspd,obj_block){
 y+= vspd
 
 #endregion
+
+
+
 //player aiming
 centerY = y + centerYOffset
 
@@ -62,13 +65,14 @@ if aimDir> 90 and aimDir < 270{
 if shooterTime >0 {
 	shooterTime --
 }
+
 #region shooting
 if (_shootKey && shooterTime <=  0){
-	shooterTime = shootCooldown
+	shooterTime = weapon.coolDown
 	// por cada instancia ser criada e ter seu propio id, nós podemos manipular ela e guardar seu id
-	var _xOffset = lengthdir_x(weaponLenght+ weaponOffsetDist,aimDir)
-	var _yOffset = lengthdir_y(weaponLenght+ weaponOffsetDist,aimDir)
-	var _bulletInst = instance_create_depth(x+_xOffset, centerY+_yOffset,depth-100,bullet) // topo do jogador
+	var _xOffset = lengthdir_x(weapon.length+ weaponOffsetDist,aimDir)
+	var _yOffset = lengthdir_y(weapon.length+ weaponOffsetDist,aimDir)
+	var _bulletInst = instance_create_depth(x+_xOffset, centerY+_yOffset,depth-100,weapon.bullet) // topo do jogador
 	
 	//change the bullet direction
 	with(_bulletInst){ // whenerver we use with, that means we are going inside of this other instance

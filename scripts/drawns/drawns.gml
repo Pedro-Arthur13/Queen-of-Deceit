@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function draw_my_weapon(){
 	
 	//get the weapon of the players body
@@ -15,5 +14,5 @@ function draw_my_weapon(){
 
 	}
 
-	draw_sprite_ext(spr_mp7,0,x + _xOffset,centerY + _yOffset,1,_weaponYscale,aimDir,c_white,1)
+	draw_sprite_ext(weapon.sprite ,0,x + _xOffset,centerY + _yOffset,weapon.xScale,weapon.yScale,aimDir,c_white,1)
 }
