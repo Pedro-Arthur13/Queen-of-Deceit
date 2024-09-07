@@ -9,6 +9,7 @@ draw_text_color(x,y-80,vspd,c_black, c_black, c_black, c_black, 1)
 
 // bora tubaroees
 // bora batista
+//askdfnkasdfnj
 
 #endregion
 
