@@ -1,34 +1,36 @@
-#region move
+//#region move
 
-hspd = lengthdir_x(spd,dir)
-vspd = lengthdir_y(spd,dir)
+//hspd = lengthdir_x(spd,dir)
+//vspd = lengthdir_y(spd,dir)
 
-x += hspd
-y += vspd
-#endregion
+//x += hspd
+//y += vspd
+//#endregion
 
-#region cleanup
+//#region cleanup
 
 
-#region colisao
-if(place_meeting(x,y,obj_block)){
-	destroy = true
-}
-#endregion
+//#region colisao
+//if(place_meeting(x,y,obj_block)){
+//	destroy = true
+//}
+//#endregion
 
-//bullet out of range
+////bullet out of range
 
-// Quando uma nova instancia é criada no gamemaker ela armazena seu x inicial assim como seu y incial
-// dessa forma podemos usar essas variaveis built-in para calcular quantos pixels as balas ja percorreram
-if point_distance(xstart,ystart,x,y) > max_dist{
-	destroy = true
+//// Quando uma nova instancia é criada no gamemaker ela armazena seu x inicial assim como seu y incial
+//// dessa forma podemos usar essas variaveis built-in para calcular quantos pixels as balas ja percorreram
+//if point_distance(xstart,ystart,x,y) > max_dist{
+//	destroy = true
 	
-}
+//}
 
 
-if (destroy){
-	//vfx here
-	instance_destroy()
-}
+//if (destroy){
+//	//vfx here
+//	instance_destroy()
+//}
 
-#endregion
+//#endregion
+event_inherited() // tipo uma classe filho que extend a classe pai
+image_angle = dir

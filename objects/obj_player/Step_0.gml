@@ -3,6 +3,8 @@ move = -keyboard_check(ord("A"))+keyboard_check(ord("D"))
 move_v = -keyboard_check(ord("W"))+keyboard_check(ord("S"))
 var _shootKey = mouse_check_button(mb_left)
 var _diagonalspd = spd * 0.707
+if keyboard_check_pressed(vk_alt) {weapon = global.WeaponList.mp7}
+if keyboard_check_pressed(vk_lcontrol) {weapon =  global.WeaponList.cajado}
 colide = [obj_block] // Array de colisão
 
 moveDir = point_direction(0,0,move,move_v)

@@ -32,3 +32,4 @@ if (destroy){
 }
 
 #endregion
+image_angle = dir
