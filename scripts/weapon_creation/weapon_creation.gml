@@ -1,13 +1,20 @@
 // Construtctor template for weapons 
 // args = default
-function create_weapon(_sprite = spr_mp7,_length =  0,_bulletObj = obj_bullet,_coolDown = 1, _xScale=1,_yScale=1) constructor{
+function create_weapon(_sprite = spr_mp7,_length =  0,_bulletObj = obj_bullet,_coolDown = 1, _bulletNum = 1, _spread = 0) constructor{
 	sprite = _sprite;
 	length = _length;
 	bullet = _bulletObj;
 	coolDown = _coolDown;
 	xScale = _xScale;
 	yScale = _yScale;
+	bulletNum = _bulletNum
+	spread = _spread
 }
+
+// inventário de armas do player 
+global.PlayerWeapons = array_create(0) //Array vazio
+
+
 
 // the weapons
 
@@ -19,12 +26,16 @@ global.WeaponList = {
 	mp7 : new create_weapon(spr_mp7, 
 		sprite_get_bbox_right(spr_mp7) - sprite_get_xoffset(spr_mp7),
 		obj_bullet,
-		3),// new struck, from weapon_creation
+		10),// new struck, from weapon_creation
 	
 	cajado : new create_weapon(spr_cajado, 
 		sprite_get_bbox_right(spr_cajado) - sprite_get_xoffset(spr_cajado),
 		obj_bullet_1,
-		2,
-		0.7,
-		0.7)// new struck, from weapon_creation
+		2),// new struck, from weapon_creation
+	shotgun : new create_weapon(spr_shotgun,
+		sprite_get_bbox_right(spr_shotgun) - sprite_get_xoffset(spr_shotgun),
+		obj_redBullet,
+		16,
+		4,
+		45)
 }

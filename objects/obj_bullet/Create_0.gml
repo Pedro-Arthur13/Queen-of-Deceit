@@ -5,4 +5,5 @@ vspd = 0 // y
 
 //cleanup
 max_dist = 300
+dir_fix = true
 destroy = false

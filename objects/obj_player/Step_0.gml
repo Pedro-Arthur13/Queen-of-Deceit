@@ -3,8 +3,9 @@ move = -keyboard_check(ord("A"))+keyboard_check(ord("D"))
 move_v = -keyboard_check(ord("W"))+keyboard_check(ord("S"))
 var _shootKey = mouse_check_button(mb_left)
 var _diagonalspd = spd * 0.707
-if keyboard_check_pressed(vk_alt) {weapon = global.WeaponList.mp7}
-if keyboard_check_pressed(vk_lcontrol) {weapon =  global.WeaponList.cajado}
+var _swapKeyPressed = mouse_check_button_pressed(mb_right) // botao pra trocar arma
+
+
 colide = [obj_block] // Array de colisão
 
 moveDir = point_direction(0,0,move,move_v)
@@ -50,8 +51,24 @@ y+= vspd
 centerY = y + centerYOffset
 
 
+
+#region weapon swapping
+// weapon swapping
+var _playerWeapons = global.PlayerWeapons
+//cycle through weapons
+if _swapKeyPressed{
+	// change the selection and wrap around
+	selectedWeapon ++
+	
+	if selectedWeapon >= array_length(_playerWeapons) {selectedWeapon = 0}
+	
+	// set the new weapon
+	weapon = _playerWeapons[selectedWeapon]
+}
+#endregion
 //aim
 aimDir = point_direction(x,centerY,mouse_x,mouse_y)
+
 
 #region Sprite control
 
@@ -74,14 +91,27 @@ if (_shootKey && shooterTime <=  0){
 	// por cada instancia ser criada e ter seu propio id, nós podemos manipular ela e guardar seu id
 	var _xOffset = lengthdir_x(weapon.length+ weaponOffsetDist,aimDir)
 	var _yOffset = lengthdir_y(weapon.length+ weaponOffsetDist,aimDir)
-	var _bulletInst = instance_create_depth(x+_xOffset, centerY+_yOffset,depth-100,weapon.bullet) // topo do jogador
+	var _spread = weapon.spread
+	// weapon.bulletNum-1 pq temos que dividir pela quantidade de espaços que temos, caso contariao teriamos um erro 
+	// com amras que usam apenas 3 balas
+	var _spreadDiv = _spread/max(weapon.bulletNum-1,1) // o minimo que pode ter de bala eh 1
 	
-	//change the bullet direction
-	with(_bulletInst){ // whenerver we use with, that means we are going inside of this other instance
-	
-		// o codigo aqui dentro deve ser escrito como se estivesse sendo escrito dentro da instancia
-		dir = other.aimDir // other significa que vai pegar do obj que esta mais acima no escopo, nesse caso eh o player
+	//create the correct number of bullets
+	for (var i = 0; i < weapon.bulletNum; i++  ){
 		
+		var _bulletInst = instance_create_depth(x+_xOffset, centerY+_yOffset,depth-100,weapon.bullet) // topo do jogador
+	
+		//change the bullet direction
+		with(_bulletInst){ // whenerver we use with, that means we are going inside of this other instance
+	
+			// o codigo aqui dentro deve ser escrito como se estivesse sendo escrito dentro da instancia
+			dir = other.aimDir - _spread/2 + _spreadDiv*i // other significa que vai pegar do obj que esta mais acima no escopo, nesse caso eh o player
+			//turn the bullet to the correct direction
+			if dir_fix{
+				image_angle = dir
+			}
+		}
+	
 	}
 	
 }
@@ -89,3 +119,4 @@ if (_shootKey && shooterTime <=  0){
 
 // IMPORTANTE
 // Se o obj_bullet não for destruido ao sair da tela, ele permanecerá consumindo memoria
+

@@ -12,4 +12,10 @@ aimDir = 0
 
 shooterTime = 0
 
-weapon =  global.WeaponList.cajado
+// add weapons to player weapon inventory
+array_push(global.PlayerWeapons,global.WeaponList.mp7 ) // funciona como um append
+array_push(global.PlayerWeapons, global.WeaponList.cajado ) 
+array_push(global.PlayerWeapons, global.WeaponList.shotgun) 
+
+selectedWeapon = 2 //arma atual
+weapon =  global.PlayerWeapons[selectedWeapon]

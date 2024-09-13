@@ -1,3 +1,4 @@
+
 #region move
 
 hspd = lengthdir_x(spd,dir)
@@ -32,4 +33,3 @@ if (destroy){
 }
 
 #endregion
-image_angle = dir
