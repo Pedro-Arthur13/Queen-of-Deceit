@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bullet",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_lampeao",
+  "eventList":[],
   "managed":true,
-  "name":"obj_bullet",
+  "name":"obj_lampeao",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -32,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_blue_bulllet",
-    "path":"sprites/spr_blue_bulllet/spr_blue_bulllet.yy",
+    "name":"spr_lampiao",
+    "path":"sprites/spr_lampiao/spr_lampiao.yy",
   },
   "spriteMaskId":null,
   "visible":true,

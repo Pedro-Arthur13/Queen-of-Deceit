@@ -5,8 +5,6 @@ function create_weapon(_sprite = spr_mp7,_length =  0,_bulletObj = obj_bullet,_c
 	length = _length;
 	bullet = _bulletObj;
 	coolDown = _coolDown;
-	xScale = _xScale;
-	yScale = _yScale;
 	bulletNum = _bulletNum
 	spread = _spread
 }

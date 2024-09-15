@@ -101,6 +101,7 @@ if (_shootKey && shooterTime <=  0){
 		
 		var _bulletInst = instance_create_depth(x+_xOffset, centerY+_yOffset,depth-100,weapon.bullet) // topo do jogador
 	
+
 		//change the bullet direction
 		with(_bulletInst){ // whenerver we use with, that means we are going inside of this other instance
 	
@@ -113,6 +114,8 @@ if (_shootKey && shooterTime <=  0){
 		}
 	
 	}
+	instance_create_layer(x,y,"Instances_1",obj_bulletParticle)
+
 	
 }
 #endregion

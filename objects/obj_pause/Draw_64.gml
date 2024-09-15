@@ -52,7 +52,7 @@ for(var i = 0; i < tam_menu; i++){
 
 
 	}	
-	draw_text_transformed_color(_wgui/2,50+  _hgui/2 + _hstr*i,menu_pause[i],escala[i],escala[i],0,c_black, c_black, c_black, c_black, 1)
+	draw_text_transformed_color(_wgui/2,50+  _hgui/2 + _hstr*i,menu_pause[i],escala[i],escala[i],0,c_white, c_white, c_white, c_white, 1)
 
 }
 }
