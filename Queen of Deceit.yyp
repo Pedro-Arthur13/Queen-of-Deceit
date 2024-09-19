@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Queen of Deceit",
   "resources":[
@@ -40,6 +40,7 @@
     {"id":{"name":"obj_bullet_1","path":"objects/obj_bullet_1/obj_bullet_1.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_bulletParticle","path":"objects/obj_bulletParticle/obj_bulletParticle.yy",},},
+    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_iluminacao","path":"objects/obj_iluminacao/obj_iluminacao.yy",},},
     {"id":{"name":"obj_lampeao","path":"objects/obj_lampeao/obj_lampeao.yy",},},
     {"id":{"name":"obj_menu_Inicial","path":"objects/obj_menu_Inicial/obj_menu_Inicial.yy",},},
@@ -62,6 +63,7 @@
     {"id":{"name":"spr_blue_bulllet","path":"sprites/spr_blue_bulllet/spr_blue_bulllet.yy",},},
     {"id":{"name":"spr_bulletParticle","path":"sprites/spr_bulletParticle/spr_bulletParticle.yy",},},
     {"id":{"name":"spr_cajado","path":"sprites/spr_cajado/spr_cajado.yy",},},
+    {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_fireBullet","path":"sprites/spr_fireBullet/spr_fireBullet.yy",},},
     {"id":{"name":"spr_lampiao","path":"sprites/spr_lampiao/spr_lampiao.yy",},},
     {"id":{"name":"spr_mp7","path":"sprites/spr_mp7/spr_mp7.yy",},},
