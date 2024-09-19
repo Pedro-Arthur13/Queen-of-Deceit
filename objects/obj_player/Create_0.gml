@@ -19,3 +19,7 @@ array_push(global.PlayerWeapons, global.WeaponList.shotgun)
 
 selectedWeapon = 2 //arma atual
 weapon =  global.PlayerWeapons[selectedWeapon]
+
+
+//vida do caboco
+hp = 3

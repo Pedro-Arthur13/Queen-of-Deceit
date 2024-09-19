@@ -120,6 +120,10 @@ if (_shootKey && shooterTime <=  0){
 }
 #endregion
 
+if hp <= 0{
+	instance_destroy()
+}
+
 // IMPORTANTE
 // Se o obj_bullet não for destruido ao sair da tela, ele permanecerá consumindo memoria
 
