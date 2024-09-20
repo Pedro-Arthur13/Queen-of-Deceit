@@ -1,6 +1,6 @@
 vspd = 0
 hpsd = 0
-spd = 3
+spd = 5
 moveDir = 0
 
 centerYOffset = -9

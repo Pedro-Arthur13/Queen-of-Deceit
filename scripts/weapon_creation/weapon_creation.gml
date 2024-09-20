@@ -35,5 +35,9 @@ global.WeaponList = {
 		obj_redBullet,
 		16,
 		4,
-		45)
+		45),
+	iceWand : new create_weapon(spr_iceWand, 
+		sprite_get_bbox_right(spr_iceWand) - sprite_get_xoffset(spr_iceWand),
+		obj_iceBullet,
+		2)
 }
