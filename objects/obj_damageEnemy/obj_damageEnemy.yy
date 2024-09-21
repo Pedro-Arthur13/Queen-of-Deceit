@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_iceBullet",
+  "%Name":"obj_damageEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_iceBullet",
+  "name":"obj_damageEnemy",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Emeny",
+    "path":"folders/Emeny.yy",
   },
   "parentObjectId":{
-    "name":"obj_enemyBullet",
-    "path":"objects/obj_enemyBullet/obj_enemyBullet.yy",
+    "name":"obj_damageParent",
+    "path":"objects/obj_damageParent/obj_damageParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_iceBullet",
-    "path":"sprites/spr_iceBullet/spr_iceBullet.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,4 +1,3 @@
-event_inherited()
 dir = 0
 spd = 5
 hspd = 0 // x
