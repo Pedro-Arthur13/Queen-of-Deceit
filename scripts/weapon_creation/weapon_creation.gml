@@ -26,8 +26,8 @@ global.WeaponList = {
 		obj_bullet,
 		10),// new struck, from weapon_creation
 	
-	cajado : new create_weapon(spr_cajado, 
-		sprite_get_bbox_right(spr_cajado) - sprite_get_xoffset(spr_cajado),
+	cajado : new create_weapon(spr_fireWand, 
+		sprite_get_bbox_right(spr_fireWand) - sprite_get_xoffset(spr_fireWand),
 		obj_bullet_1,
 		2),// new struck, from weapon_creation
 	shotgun : new create_weapon(spr_shotgun,
