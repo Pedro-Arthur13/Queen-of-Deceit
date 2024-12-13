@@ -32,7 +32,9 @@ for(var i = 0; i < tam_menu; i++){
 		switch menu_inicial[i]{
 			case menu_inicial[0]: //Jogar
 			audio_play_sound(BNA_UI17,10,false)
-				create_transicao(Room2)
+			
+			audio_pause_sound(Teste_Queen)
+				create_transicao(Room3)
 			case menu_inicial[1]: //Opcoes
 				break
 			case menu_inicial[2]: //Creditos

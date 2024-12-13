@@ -5,3 +5,4 @@ weaponOffsetDist = 7
 shootTime = 40
 hostil = false
 weapon = global.WeaponList.iceWand
+hp = 10

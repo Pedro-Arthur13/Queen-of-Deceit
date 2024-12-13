@@ -5,8 +5,26 @@ var _shootKey = mouse_check_button(mb_left)
 var _diagonalspd = spd * 0.707
 var _swapKeyPressed = mouse_check_button_pressed(mb_right) // botao pra trocar arma
 
+// Teste de colisao com projeteis inimigos
+enemy_projectiles = [obj_iceBullet]
 
-colide = [obj_block] // Array de colisão
+
+#region VOID FALL
+// A lógica aqui é fazer a mecanica de se ele encostar no obj_fall, ele reproduzir a animação de cair, perder uma vida e voltar
+// para o xstart e ystart, tipo que nem o tower of 100 floors
+if (place_meeting(x,y,obj_fall)){ 
+	room_restart()
+}
+#endregion
+
+#region Debug Sala
+// Apenas pra Debug
+if (keyboard_check(ord("R"))){
+	room_goto(Room2)
+}
+#endregion
+
+colide = [obj_block,obj_wall] // Array de colisão
 
 moveDir = point_direction(0,0,move,move_v)
 
@@ -23,9 +41,9 @@ else{
 }
 #endregion
 
-if place_meeting(x+hspd,y,obj_block){
+if place_meeting(x+hspd,y,colide){
 	
-	while !place_meeting(x+sign(hspd),y,obj_block){
+	while !place_meeting(x+sign(hspd),y,colide){
 		x += sign(hspd) // Não usar x = sign(hspd)
 	}
 	hspd = 0
@@ -34,9 +52,9 @@ if place_meeting(x+hspd,y,obj_block){
 
 x+= hspd
 
-if place_meeting(x,y+vspd,obj_block){
+if place_meeting(x,y+vspd,colide){
 	
-	while !place_meeting(x,y+sign(vspd),obj_block){
+	while !place_meeting(x,y+sign(vspd),colide){
 		y += sign(vspd) // Não usar x = sign(hspd)
 	}
 	vspd = 0
@@ -120,10 +138,21 @@ if (_shootKey && shooterTime <=  0){
 }
 #endregion
 
-if hp <= 0{
-	instance_destroy()
+if place_meeting(x,y,enemy_projectiles){
+	with(obj_iceBullet){
+		instance_destroy()
+	}
+	hp -= 1
 }
 
+if hp <= 0{
+	room_restart()
+	//instance_destroy()
+}
+
+if place_meeting(x,y,obj_nextRoom){
+	room_goto_next()
+}
 // IMPORTANTE
 // Se o obj_bullet não for destruido ao sair da tela, ele permanecerá consumindo memoria
 

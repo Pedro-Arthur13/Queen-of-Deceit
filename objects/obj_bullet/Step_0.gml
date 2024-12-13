@@ -10,9 +10,9 @@ y += vspd
 
 #region cleanup
 
-
+colide = [obj_block,obj_wall]
 #region colisao
-if(place_meeting(x,y,obj_block)){
+if(place_meeting(x,y,colide)){
 	destroy = true
 }
 #endregion

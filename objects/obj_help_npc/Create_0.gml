@@ -1,0 +1,1 @@
+/// @description esse npc vai dar algumas instruções ao jogador de como o jogo funciona no andar 1
