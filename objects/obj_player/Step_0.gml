@@ -20,7 +20,7 @@ if (place_meeting(x,y,obj_fall)){
 #region Debug Sala
 // Apenas pra Debug
 if (keyboard_check(ord("R"))){
-	room_goto(Room2)
+	room_goto(Debug_room)
 }
 #endregion
 
@@ -142,10 +142,10 @@ if place_meeting(x,y,enemy_projectiles){
 	with(obj_iceBullet){
 		instance_destroy()
 	}
-	hp -= 1
+	global.hplayer -= 1
 }
 
-if hp <= 0{
+if global.hplayer <= 0{
 	room_restart()
 	//instance_destroy()
 }

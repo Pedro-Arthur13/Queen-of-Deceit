@@ -22,4 +22,4 @@ weapon =  global.PlayerWeapons[selectedWeapon]
 
 
 //vida do caboco
-hp = 3
+global.hplayer = 3
