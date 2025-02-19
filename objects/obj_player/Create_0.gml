@@ -23,3 +23,21 @@ weapon =  global.PlayerWeapons[selectedWeapon]
 
 //vida do caboco
 global.hplayer = 3
+
+
+
+// Cria o inventário como um dicionário
+inventory = ds_map_create();
+
+// Inicializa os itens com 0 unidades
+inventory[? "apple"] = 0;
+inventory[? "juice"] = 0;
+
+// Lista dos itens para seleção
+inventory_items = ["apple", "juice"];
+selected_index = 0; // Começa com "apple"
+
+// Dicionário de sprites associadas aos itens
+item_sprites = ds_map_create();
+item_sprites[? "apple"] = spr_apple; // Substitua por sua sprite real da maçã
+item_sprites[? "juice"] = spr_juice; // Substitua por sua sprite real do suco

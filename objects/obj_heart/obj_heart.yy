@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_nextRoom",
+  "%Name":"obj_heart",
   "eventList":[],
   "managed":true,
-  "name":"obj_nextRoom",
+  "name":"obj_heart",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite32",
-    "path":"sprites/Sprite32/Sprite32.yy",
+    "name":"Sprite33",
+    "path":"sprites/Sprite33/Sprite33.yy",
   },
   "spriteMaskId":null,
   "visible":true,

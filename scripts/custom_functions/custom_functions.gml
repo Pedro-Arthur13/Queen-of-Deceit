@@ -17,3 +17,19 @@ function transicao_room(){
 
 	}
 }
+
+// Adiciona um item ao inventário
+function add_item(item_name, amount) {
+    if (inventory[? item_name]) {
+        inventory[? item_name] += amount;
+    } else {
+        inventory[? item_name] = amount;
+    }
+}
+
+// Remove um item do inventário
+function remove_item(item_name, amount) {
+    if (inventory[? item_name] && inventory[? item_name] >= amount) {
+        inventory[? item_name] -= amount;
+    }
+}

@@ -5,16 +5,53 @@ var _shootKey = mouse_check_button(mb_left)
 var _diagonalspd = spd * 0.707
 var _swapKeyPressed = mouse_check_button_pressed(mb_right) // botao pra trocar arma
 
+if (global.hplayer >3){
+	global.hplayer =3
+}
+#region inventory
+// Muda o item selecionado com as teclas <- e ->
+if (keyboard_check_pressed(vk_right)) {
+    selected_index = (selected_index + 1) mod array_length(inventory_items);
+}
+
+if (keyboard_check_pressed(vk_left)) {
+    selected_index = (selected_index - 1 + array_length(inventory_items)) mod array_length(inventory_items);
+}
+
+// Obtem o item selecionado
+global.selected_item = inventory_items[selected_index];
+global.selected_sprite = item_sprites[? global.selected_item];
+
+if (place_meeting(x,y,obj_apple)){
+	inventory[? "apple"] += 1;
+	var apple_instance = instance_place(x, y, obj_apple); // Obtém a instância específica do obj_heart que está na posição
+    if (apple_instance != noone) {
+        instance_destroy(apple_instance); // Destrói apenas a instância detectada
+    }
+}
+
+if (keyboard_check_pressed(ord("F")) and (inventory[? global.selected_item] > 0)){
+	global.hplayer += 2
+	inventory[? global.selected_item] -= 1
+}
+
+#endregion
+
 // Teste de colisao com projeteis inimigos
 enemy_projectiles = [obj_iceBullet]
 
-
+enemys = [obj_iceMage,obj_bat]
+if (place_meeting(x,y,obj_bat)){
+	spd = 2.5
+}else{
+	spd = 3
+}
 #region VOID FALL
 // A lógica aqui é fazer a mecanica de se ele encostar no obj_fall, ele reproduzir a animação de cair, perder uma vida e voltar
 // para o xstart e ystart, tipo que nem o tower of 100 floors
-if (place_meeting(x,y,obj_fall)){ 
-	room_restart()
-}
+//if (place_meeting(x,y,obj_fall)){ 
+//	room_restart()
+//}
 #endregion
 
 #region Debug Sala
@@ -24,7 +61,7 @@ if (keyboard_check(ord("R"))){
 }
 #endregion
 
-colide = [obj_block,obj_wall] // Array de colisão
+colide = [obj_block,obj_wall,obj_blocked] // Array de colisão
 
 moveDir = point_direction(0,0,move,move_v)
 
@@ -153,6 +190,23 @@ if global.hplayer <= 0{
 if place_meeting(x,y,obj_nextRoom){
 	room_goto_next()
 }
+if (place_meeting(x, y, obj_heart)) {
+    var heart_instance = instance_place(x, y, obj_heart); // Obtém a instância específica do obj_heart que está na posição
+    if (heart_instance != noone) {
+        global.hplayer += 1;
+        instance_destroy(heart_instance); // Destrói apenas a instância detectada
+    }
+}
+
+
+
 // IMPORTANTE
 // Se o obj_bullet não for destruido ao sair da tela, ele permanecerá consumindo memoria
 
+if (!instance_exists(obj_iceMage) and !instance_exists(obj_bat)) {
+    with(obj_blocked){
+		instance_destroy()
+	}
+	
+	
+}

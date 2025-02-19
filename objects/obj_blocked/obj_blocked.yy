@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_nextRoom",
+  "%Name":"obj_blocked",
   "eventList":[],
   "managed":true,
-  "name":"obj_nextRoom",
+  "name":"obj_blocked",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite32",
-    "path":"sprites/Sprite32/Sprite32.yy",
+    "name":"Sprite29",
+    "path":"sprites/Sprite29/Sprite29.yy",
   },
   "spriteMaskId":null,
   "visible":true,
