@@ -47,5 +47,9 @@ global.WeaponList = {
 	fireWand : new create_weapon(spr_fireWand2, 
 		sprite_get_bbox_right(spr_fireWand2) - sprite_get_xoffset(spr_fireWand2),
 		obj_bullet_enemy,
+		2),
+	invisibleWand : new create_weapon(spr_invisibleWand, 
+		sprite_get_bbox_right(spr_invisibleWand) - sprite_get_xoffset(spr_invisibleWand),
+		obj_bullet_Frog,
 		2)
 }

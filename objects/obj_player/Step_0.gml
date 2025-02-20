@@ -52,7 +52,7 @@ if (!global.pause and !global.indialog){
 	#endregion
 
 	// Teste de colisao com projeteis inimigos
-	enemy_projectiles = [obj_iceBullet,obj_bullet_enemy]
+	enemy_projectiles = [obj_iceBullet,obj_bullet_enemy,obj_bullet_Frog]
 
 	enemys = [obj_iceMage,obj_bat]
 	if (place_meeting(x,y,obj_bat)){
@@ -197,22 +197,34 @@ if (!global.pause and !global.indialog){
 		with(obj_bullet_enemy){
 			instance_destroy()
 		}
+		with(obj_bullet_Frog){
+			instance_destroy()
+		}
 		global.hplayer -= 1
 	}
 
 	if global.hplayer <= 0{
+		
 		instance_destroy()
 
 		room_restart()
-		instance_create_layer(290,267,"Instances_1_1",obj_player)
+		if (room == Room15){
+			instance_create_layer(290,220,"Instances_1_1",obj_player)
+		}else{
+			instance_create_layer(290,267,"Instances_1_1",obj_player)}
 		//instance_destroy()
 	}
 
-	if place_meeting(x,y,obj_nextRoom){
-		y=267
-		x=290
-		room_goto_next()
-	}
+	if place_meeting(x, y, obj_nextRoom) {
+	    if (room == Room3) { 
+	        y = 220;
+	    } else {
+	        y = 267;
+	    }
+	    x = 290;
+	    room_goto_next();
+}
+
 	if (place_meeting(x, y, obj_heart)) {
 	    var heart_instance = instance_place(x, y, obj_heart); // Obtém a instância específica do obj_heart que está na posição
 	    if (heart_instance != noone) {
@@ -227,7 +239,7 @@ if (!global.pause and !global.indialog){
 	// IMPORTANTE
 	// Se o obj_bullet não for destruido ao sair da tela, ele permanecerá consumindo memoria
 
-	if (!instance_exists(obj_iceMage) and !instance_exists(obj_bat)) {
+	if (!instance_exists(obj_iceMage) and !instance_exists(obj_bat) and !instance_exists(obj_bossFrog)) {
 	    with(obj_blocked){
 			instance_destroy()
 		}

@@ -1,0 +1,2 @@
+audio_pause_sound(Ruined_Place)
+instance_destroy(obj_gameMusic)
