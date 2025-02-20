@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_iceMageIdle",
-    "path":"sprites/spr_iceMageIdle/spr_iceMageIdle.yy",
+    "name":"spr_iceMage",
+    "path":"sprites/spr_iceMage/spr_iceMage.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -7,7 +7,7 @@ if (instance_exists(obj_player)){
 	if (distancia <= raio) and ! abriu{
 	    // Jogador está dentro da área
 		if !instance_exists(obj_chest_dialog){
-	       instance_create_depth(x, y - 25, 0, obj_chest_dialog);
+	       instance_create_depth(x-15, y-50, 0, obj_chest_dialog);
 		}
 	
 		   if keyboard_check_pressed(ord("E")){

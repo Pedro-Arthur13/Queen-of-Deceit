@@ -4,7 +4,7 @@ if (!global.pause and !global.indialog){
 	var _shootKey = mouse_check_button(mb_left)
 	var _diagonalspd = spd * 0.707
 	var _swapKeyPressed = mouse_check_button_pressed(mb_right) // botao pra trocar arma
-
+	//show_debug_message(selectedWeapon)
 	if (global.hplayer >3){
 		global.hplayer =3
 	}
@@ -36,6 +36,13 @@ if (!global.pause and !global.indialog){
 	        instance_destroy(flame_wand_instance); // Destrói apenas a instância detectada
 	    }
 	}
+	if (place_meeting(x,y,obj_supreme_wand)){
+		array_push(global.PlayerWeapons, global.WeaponList.supreme_wand ) 
+		var supreme_wand_instance = instance_place(x, y, obj_supreme_wand); // Obtém a instância específica do obj_heart que está na posição
+	    if (supreme_wand_instance != noone) {
+	        instance_destroy(supreme_wand_instance); // Destrói apenas a instância detectada
+	    }
+	}
 
 	if (keyboard_check_pressed(ord("F")) and (inventory[? global.selected_item] > 0)){
 		global.hplayer += 2
@@ -45,7 +52,7 @@ if (!global.pause and !global.indialog){
 	#endregion
 
 	// Teste de colisao com projeteis inimigos
-	enemy_projectiles = [obj_iceBullet]
+	enemy_projectiles = [obj_iceBullet,obj_bullet_enemy]
 
 	enemys = [obj_iceMage,obj_bat]
 	if (place_meeting(x,y,obj_bat)){
@@ -176,7 +183,8 @@ if (!global.pause and !global.indialog){
 			}
 	
 		}
-		instance_create_layer(x,y,"Instances_1_1",obj_bulletParticle)
+		if (selectedWeapon != 3) instance_create_layer(x,y,"Instances_1_1",obj_bulletParticle)
+
 
 	
 	}
@@ -184,6 +192,9 @@ if (!global.pause and !global.indialog){
 
 	if place_meeting(x,y,enemy_projectiles){
 		with(obj_iceBullet){
+			instance_destroy()
+		}
+		with(obj_bullet_enemy){
 			instance_destroy()
 		}
 		global.hplayer -= 1

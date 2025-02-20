@@ -14,6 +14,8 @@ shooterTime = 0
 
 // add weapons to player weapon inventory
 array_push(global.PlayerWeapons,global.WeaponList.mp7 ) // funciona como um append
+//array_push(global.PlayerWeapons,global.WeaponList.supreme_wand ) // funciona como um append
+
 //array_push(global.PlayerWeapons, global.WeaponList.cajado ) 
 //array_push(global.PlayerWeapons, global.WeaponList.shotgun) 
 

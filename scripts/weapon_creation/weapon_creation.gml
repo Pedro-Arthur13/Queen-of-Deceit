@@ -29,15 +29,23 @@ global.WeaponList = {
 	cajado : new create_weapon(spr_fireWand, 
 		sprite_get_bbox_right(spr_fireWand) - sprite_get_xoffset(spr_fireWand),
 		obj_bullet_1,
-		2),// new struck, from weapon_creation
+		6),// new struck, from weapon_creation
 	shotgun : new create_weapon(spr_shotgun,
 		sprite_get_bbox_right(spr_shotgun) - sprite_get_xoffset(spr_shotgun),
 		obj_redBullet,
 		16,
 		4,
 		45),
+	supreme_wand : new create_weapon(spr_wand,
+		sprite_get_bbox_right(spr_wand) - sprite_get_xoffset(spr_wand),
+		obj_bullet_supreme,
+		4),
 	iceWand : new create_weapon(spr_iceWand, 
 		sprite_get_bbox_right(spr_iceWand) - sprite_get_xoffset(spr_iceWand),
 		obj_iceBullet,
+		2),
+	fireWand : new create_weapon(spr_fireWand2, 
+		sprite_get_bbox_right(spr_fireWand2) - sprite_get_xoffset(spr_fireWand2),
+		obj_bullet_enemy,
 		2)
 }

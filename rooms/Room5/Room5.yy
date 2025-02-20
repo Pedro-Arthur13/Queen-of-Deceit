@@ -24,7 +24,6 @@
     {"name":"inst_7D900C0B","path":"rooms/Room5/Room5.yy",},
     {"name":"inst_36EE4389","path":"rooms/Room5/Room5.yy",},
     {"name":"inst_5F658E7","path":"rooms/Room5/Room5.yy",},
-    {"name":"inst_48414A1E","path":"rooms/Room5/Room5.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -45,9 +44,7 @@
         {"$GMRInstance":"v1","%Name":"inst_36EE4389","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36EE4389","objectId":{"name":"obj_lampeao","path":"objects/obj_lampeao/obj_lampeao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":170.0,"y":112.0,},
         {"$GMRInstance":"v1","%Name":"inst_5F658E7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F658E7","objectId":{"name":"obj_iluminacao","path":"objects/obj_iluminacao/obj_iluminacao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":290.0,"y":82.0,},
       ],"layers":[],"name":"Instances_1_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Instances_2","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_48414A1E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_48414A1E","objectId":{"name":"obj_chest_gun","path":"objects/obj_chest_gun/obj_chest_gun.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":64.0,},
-      ],"layers":[],"name":"Instances_2","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Instances_2","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances_2","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_1","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_1","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":18,"SerialiseWidth":33,"TileCompressedData":[
           -2,0,-13,31,-5,0,-13,31,-2,0,2,31,34,-10,156,1,157,-5,0,1,155,-11,156,5,63,0,0,31,34,-28,1,5,63,0,0,
           31,34,-28,1,5,63,0,0,31,34,-18,1,1,2,-4,1,1,2,-4,1,5,63,0,0,31,34,-4,1,1,4,-9,1,1,4,-13,1,5,63,0,0,31,

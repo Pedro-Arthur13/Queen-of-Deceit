@@ -2,7 +2,7 @@ draw_self()
 
 
 depth = -11
-draw_sprite_ext(weapon.sprite ,0,posxw,posyw,1,1,0,c_white,1)
+draw_sprite_ext(weapon.sprite ,weapon,posxw,posyw,1,1,0,c_white,1)
 draw_sprite_ext(spr_life_inventory ,index_heart,10,155,1.3,1.3,0,c_white,1)
 if (global.selected_sprite == spr_apple){
 	draw_sprite_ext(global.selected_sprite, 0,15, 250, 1, 1, 0, c_white, 1); 

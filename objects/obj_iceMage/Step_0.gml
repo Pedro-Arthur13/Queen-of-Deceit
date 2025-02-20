@@ -78,7 +78,7 @@ if (!global.pause){
 	}
     
 	// Movimento gradual até o destino
-	colide = [obj_block,obj_wall]
+	colide = [obj_block,obj_wall,obj_blocked]
 
 
 	if place_meeting(x+velocidade,y,colide){
