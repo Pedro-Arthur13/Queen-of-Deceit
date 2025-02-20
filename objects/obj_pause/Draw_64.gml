@@ -42,6 +42,8 @@ for(var i = 0; i < tam_menu; i++){
 				break
 			case menu_pause[3]: // Sair
 				create_transicao(Room1)
+				audio_pause_sound(Ruined_Place)
+				instance_destroy(obj_gameMusic)
 				break
 			}
 		}

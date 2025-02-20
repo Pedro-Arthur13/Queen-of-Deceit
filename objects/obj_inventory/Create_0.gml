@@ -1,5 +1,5 @@
 selectedWeapon = 2 //arma atual
-weapon =  global.PlayerWeapons[selectedWeapon]
+weapon =  global.PlayerWeapons[0]
 roomname = room_get_info(room)
 tamanhoxr = 1
 tamanhoyr = 1

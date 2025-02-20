@@ -9,9 +9,8 @@ if (distancia <= raio) {
        instance_create_depth(x, y - 25, 0, obj_dialogo_help_npc);
 	}
 	
-	   if keyboard_check_pressed(vk_space){
-		   global.index +=0.5 // Por algum motivo essa misera só funciona se vocë colocar metade dos frames
-			
+	    if keyboard_check_pressed(vk_space){
+			instance_create_layer(0,0,"Inventory",obj_dil)
 	   }
 }
 else {
