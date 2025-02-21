@@ -5,7 +5,7 @@ weaponOffsetDist = 9
 shootTime = 2
 hostil = false
 weapon = global.WeaponList.invisibleWand
-hp = 60
+hp = 25
 
 
 
