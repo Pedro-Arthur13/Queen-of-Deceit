@@ -38,6 +38,7 @@ for(var i = 0; i < tam_menu; i++){
 			case menu_inicial[1]: //Opcoes
 				break
 			case menu_inicial[2]: //Creditos
+				create_transicao(Room17)
 				break
 			case menu_inicial[3]: // Sair
 				game_end()

@@ -39,6 +39,7 @@ for(var i = 0; i < tam_menu; i++){
 			case menu_pause[1]: //Opcoes
 				break
 			case menu_pause[2]: //Creditos
+				create_transicao(Room17)
 				break
 			case menu_pause[3]: // Sair
 				create_transicao(Room1)

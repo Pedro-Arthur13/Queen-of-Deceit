@@ -8,6 +8,9 @@ if (!global.pause and !global.indialog){
 	if (global.hplayer >3){
 		global.hplayer =3
 	}
+	if (keyboard_check_pressed(ord("L"))){
+		room_goto_next()
+	}
 	#region inventory
 	// Muda o item selecionado com as teclas <- e ->
 	if (keyboard_check_pressed(vk_right)) {
@@ -216,7 +219,7 @@ if (!global.pause and !global.indialog){
 	}
 
 	if place_meeting(x, y, obj_nextRoom) {
-	    if (room == Room3) { 
+	    if (room == Room13) { 
 	        y = 220;
 	    } else {
 	        y = 267;
