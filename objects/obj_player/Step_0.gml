@@ -186,7 +186,7 @@ if (!global.pause and !global.indialog){
 			}
 	
 		}
-		if (selectedWeapon != 3) instance_create_layer(x,y,"Instances_1_1",obj_bulletParticle)
+		//if (selectedWeapon != 3) instance_create_layer(x,y,"Instances_1_1",obj_bulletParticle)
 
 
 	
